@@ -6,6 +6,9 @@
 v16.0.0
 
 ### コマンド
+
 `cd styleGuide`
+
 `npm i`
+
 `npm run fractal:start`
