@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 40px;
+}
+
+.c-accordion {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.c-accordion__item:not(:first-child) {
+  border-top: 1px solid #ccc;
+}
+.c-accordion__button {
+  border: none;
+  padding: 16px 40px 16px 16px;
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: all .2s;
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+.c-accordion__arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translate(0, -50%);
+  transition: transform .2s;
+  .c-accordion__button:hover & {
+    fill: #fff;
+  }
+  .c-accordion__button.-open & {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+}
+.c-accordion__contents {
+  display: none;
+  padding: 16px;
+  background-color: #eeeeee;
+}
+.c-accordion__paragraph {
+  line-height: 1.5;
+}
